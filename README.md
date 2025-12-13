@@ -1,187 +1,79 @@
-# ADAM Data Services - Premium 3D Website
+# ADAM Data Services Website
 
-A high-end, animated, 3D-enhanced company website showcasing ADAM Data Services as an innovative startup specializing in data engineering, AI solutions, cloud services, and VR development.
+A premium, animated, 3D-enhanced company website for ADAM Data Services - a high-skill, innovative startup specializing in AI, Data, and Cloud services.
 
 ## 🚀 Features
 
-- **3D Visualizations**: Lightweight Three.js scenes with floating particles and tech orbit visualizations
-- **Smooth Animations**: Framer Motion animations throughout for premium feel
-- **Dark/Light Mode**: Full theme support with persistent preferences
-- **Responsive Design**: Mobile-first approach with optimized 3D for all devices
-- **Performance Optimized**: Lazy-loaded 3D scenes and reduced motion support
-- **Modern Stack**: React, Vite, Tailwind CSS, Three.js
+- **3D Animations**: Interactive Three.js scenes with shooting stars, floating particles, and geometric shapes
+- **Animated Robot Character**: Friendly robot that greets visitors on the home page
+- **Responsive Design**: Fully responsive with dark/light mode support
+- **Modern UI**: Glassmorphism effects, gradient animations, and smooth transitions
+- **Process Visualization**: Canvas-based animated data pipeline diagram
+- **Technology Stack Showcase**: Interactive grid of technology icons
+- **Project Gallery**: Animated project cards with images
+- **Partner Showcase**: Animated partner logos with badges
 
 ## 🛠️ Tech Stack
 
-- **React 18** - UI framework
-- **Vite** - Build tool and dev server
-- **Tailwind CSS** - Styling
-- **Framer Motion** - Animations
-- **@react-three/fiber** - React renderer for Three.js
-- **@react-three/drei** - Three.js helpers
-- **Recharts** - Data visualization
+- **React** + **Vite** - Fast development and build
+- **Tailwind CSS** - Utility-first styling
+- **Framer Motion** - Smooth animations
+- **Three.js** (@react-three/fiber, @react-three/drei) - 3D graphics
 - **React Icons** - Icon library
 
 ## 📦 Installation
 
-1. **Clone the repository** (if applicable) or navigate to the project directory
-
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**:
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser** to `http://localhost:3000`
-
-## 🏗️ Build for Production
-
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
 npm run build
-```
-
-The production build will be in the `dist` directory.
-
-Preview the production build:
-```bash
-npm run preview
 ```
 
 ## 📁 Project Structure
 
 ```
-adam-data-services-website/
-├── public/
-│   └── logo.png          # Company logo
-├── src/
-│   ├── components/        # Reusable components
-│   │   ├── Navbar.jsx
-│   │   ├── Footer.jsx
-│   │   └── ScrollToTop.jsx
-│   ├── sections/          # Page sections
-│   │   ├── Hero.jsx
-│   │   ├── About.jsx
-│   │   ├── Services.jsx
-│   │   ├── Skills.jsx
-│   │   ├── Storytelling.jsx
-│   │   ├── Projects.jsx
-│   │   ├── WhyChooseUs.jsx
-│   │   ├── Partners.jsx
-│   │   └── Contact.jsx
-│   ├── three/             # 3D components
-│   │   ├── HeroScene.jsx
-│   │   └── TechOrbit.jsx
-│   ├── data/              # Data files
-│   │   └── companyData.js
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-├── index.html
-├── package.json
-├── vite.config.js
-├── tailwind.config.js
-└── README.md
+src/
+├── components/     # Reusable components (Navbar, Footer, Robot, etc.)
+├── sections/       # Page sections (Hero, About, Services, etc.)
+├── three/          # 3D scenes and components
+├── data/           # Company data and content
+└── assets/         # Static assets
 ```
 
-## 🎨 Customization
+## 🎨 Key Sections
 
-### Updating Company Information
+- **Hero**: 3D animated background with shooting stars
+- **About Us**: Company mission, vision, and Tampa City certification
+- **Services & Capabilities**: Animated service cards with floating icons
+- **Technology Stack**: Interactive grid of technology icons
+- **Our Process**: Canvas-based animated data pipeline visualization
+- **Projects & Solutions**: Project showcase with images and animations
+- **Our Partners**: Partner logos with animated badges
+- **Contact**: Contact form with LinkedIn integration
 
-Edit `src/data/companyData.js` to update:
-- Company name and tagline
-- Mission, vision, and values
-- Services and capabilities
-- Technology stack
-- Differentiators
+## 🌐 Deployment
 
-### Adding Partner Logos
+The website is configured for deployment on **Netlify**:
 
-1. Add partner logo images to `public/partners/` directory
-2. Update the `partners` array in `src/sections/Partners.jsx`:
-   ```javascript
-   const partners = [
-     { name: 'Partner 1', logo: '/partners/partner1.png' },
-     // ... more partners
-   ]
-   ```
+1. Push code to GitHub
+2. Connect repository to Netlify
+3. Build command: `npm run build`
+4. Publish directory: `dist`
 
-### Modifying 3D Scenes
+Netlify Forms are configured for the contact form.
 
-- **Hero Scene**: Edit `src/three/HeroScene.jsx` to customize particles and shapes
-- **Tech Orbit**: Edit `src/three/TechOrbit.jsx` to modify the technology visualization
+## 📧 Contact
 
-### Styling
-
-- **Colors**: Update gradient colors in `tailwind.config.js`
-- **Fonts**: Modify font families in `tailwind.config.js` and `index.html`
-- **Animations**: Adjust animation timings in component files
-
-## ♿ Accessibility
-
-- Respects `prefers-reduced-motion` for users who prefer less animation
-- Semantic HTML structure
-- ARIA labels on interactive elements
-- Keyboard navigation support
-- Mobile-optimized 3D (disabled on small screens if needed)
-
-## 📱 Mobile Optimization
-
-- 3D scenes are lightweight and optimized for mobile
-- Touch-friendly interactions
-- Responsive grid layouts
-- Mobile menu navigation
-
-## 🚀 Deployment
-
-### Vercel
-
-1. Push your code to GitHub
-2. Import project in Vercel
-3. Deploy automatically
-
-### Netlify
-
-1. Build the project: `npm run build`
-2. Deploy the `dist` folder to Netlify
-
-### Other Platforms
-
-The `dist` folder contains static files that can be deployed to any static hosting service.
-
-## 📝 Notes
-
-- **VR Development**: VR services are included in the Services section
-- **Partners Section**: Ready for partner logos - add images to `public/partners/` and update the component
-- **Company Profile**: Update `src/data/companyData.js` with specific details from your company profile document
-
-## 🔧 Troubleshooting
-
-### 3D scenes not loading
-- Ensure all Three.js dependencies are installed
-- Check browser console for errors
-- Verify WebGL support in your browser
-
-### Animations not working
-- Check if `prefers-reduced-motion` is enabled in your system
-- Verify Framer Motion is properly installed
-
-### Build errors
-- Clear `node_modules` and reinstall: `rm -rf node_modules && npm install`
-- Check Node.js version (recommended: 18+)
+- **Email**: sales@adamdataservice.org
+- **Phone**: +1 (850) 449-9890 | +1 (847) 641-7399
+- **Location**: Global remote team & Tampa FL, USA
+- **LinkedIn**: [ADAM Data Services](https://www.linkedin.com/company/adam-data-services/)
 
 ## 📄 License
 
-Proprietary - ADAM Data Services
-
-## 👥 Contact
-
-For questions or support, contact: contact@adamdataservices.com
-
----
-
-Built with ❤️ for ADAM Data Services
-
+© 2025 ADAM Data Services. All rights reserved.
