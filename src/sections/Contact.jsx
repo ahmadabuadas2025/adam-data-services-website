@@ -57,7 +57,7 @@ const Contact = () => {
     {
       icon: FiMail,
       label: 'Email',
-      value: 'sales@adamdataservice.org',
+      value: 'sales@adamdataservices.org',
       href: 'mailto:sales@adamdataservice.org',
     },
     {
