@@ -21,18 +21,22 @@ const Contact = () => {
     setIsSubmitting(true)
     setSubmitStatus(null)
 
-    // Netlify Forms - the form will automatically submit to Netlify
-    // when deployed. For local testing, we'll show a success message.
     const form = e.target
-    
+
     try {
-      // In production, Netlify will handle this automatically
-      // For now, simulate success
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
+      const response = await fetch('/__forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString(),
+      })
+
+      if (!response.ok) {
+        throw new Error('Form submission failed')
+      }
+
       setSubmitStatus('success')
       setFormData({ name: '', email: '', company: '', message: '' })
-      
+
       // Reset status after 5 seconds
       setTimeout(() => setSubmitStatus(null), 5000)
     } catch (error) {
@@ -55,6 +59,18 @@ const Contact = () => {
       label: 'Email',
       value: 'sales@adamdataservice.org',
       href: 'mailto:sales@adamdataservice.org',
+    },
+    {
+      icon: FiMail,
+      label: 'Email',
+      value: 'aja.it.2024@gmail.com',
+      href: 'mailto:aja.it.2024@gmail.com',
+    },
+    {
+      icon: FiMail,
+      label: 'Email',
+      value: 'Raayashanawany1993@gmail.com',
+      href: 'mailto:Raayashanawany1993@gmail.com',
     },
     {
       icon: FiPhone,
